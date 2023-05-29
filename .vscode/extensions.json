@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "charliermarsh.ruff",
+        "ms-python.python",
+        "ryanluker.vscode-coverage-gutters",
+        "tamasfe.even-better-toml",
+        "visualstudioexptteam.vscodeintellicode",
+        "GitHub.copilot"
+    ]
+}

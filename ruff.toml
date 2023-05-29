@@ -1,0 +1,11 @@
+# https://github.com/charliermarsh/ruff
+fix = true
+ignore-init-module-imports = true
+line-length = 100
+select = ["A", "B", "BLE", "C4", "C90", "D", "DTZ", "E", "ERA", "F", "I", "ISC", "N", "PGH", "PIE", "PLC", "PLE", "PLR", "PLW", "PT", "RET", "RUF", "S", "SIM", "T10", "T20", "TID", "UP", "W", "YTT"]
+ignore = ["B905", "E501", "PGH001", "RET504", "S101", "DTZ005", "PLR0913", "T201", "B006", "UP035", "ERA001", "A003", "I001", "F821"]
+unfixable = ["ERA001", "F401", "F841", "T201", "T203", "UP035", "B006"]
+src = ["src", "tests"]
+
+[pydocstyle]
+convention = "numpy"
