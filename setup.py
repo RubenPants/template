@@ -24,7 +24,7 @@ dev_dependencies = load_dependencies("dev")
 setup(
     name="my_package",
     version="0.0.0",
-    description="Pixel level crop classification using deep learning.",
+    description="Empty template repository to kickstart coding.",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     install_requires=run_dependencies,

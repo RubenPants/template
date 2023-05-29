@@ -1,1 +1,1 @@
-"""vito-crop-classification test suite."""
+"""Test suite."""

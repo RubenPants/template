@@ -85,9 +85,6 @@ environment.yml
 #experiments/
 scratch*.ipynb
 
-# Portray
-site/
-
 # Data
 experiments/
 notebooks/data
@@ -108,9 +105,3 @@ tests/data/tmp/
 
 # vscode
 workspace.code*
-
-# Application logs
-app/logs.txt
-
-# various scripts
-**/data_format/scripts/*

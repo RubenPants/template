@@ -2,7 +2,6 @@
 
 import logging
 import os
-from pathlib import Path
 
 from invoke import task
 
@@ -34,24 +33,3 @@ def lab(c):
     os.makedirs(notebooks_path, exist_ok=True)
     with c.cd(notebooks_path):
         c.run("jupyter lab --allow-root", pty=True)
-
-
-@task
-def docs(c, browser=False, output_dir="site"):
-    """Generate this package's docs."""
-    if browser:
-        c.run("portray in_browser", pty=True)
-    else:
-        c.run(f"portray as_html --output_dir {output_dir} --overwrite", pty=True)
-        logger.info("Package documentation available at ./site/index.html")
-
-
-@task
-def app(c, folder="models"):
-    """Run Streamlit app."""
-    logger.info("Opening streamlit application...")
-    path = Path.home() / f"data/vito/crop_classification/{folder}"
-    c.run(
-        f"streamlit run application.py -- --folder={path}/",
-        pty=True,
-    )
