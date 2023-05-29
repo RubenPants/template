@@ -14,18 +14,25 @@ function log {
 function create_venv {
     log "Creating virtual environment... \\n"
     python -m venv .env
+    # shellcheck disable=SC1091
+    source .env/bin/activate
     log " --> Done! \\n\\n"
 }
 
 function install_dependencies {
     log "Installing dependencies... \\n"
-    # shellcheck disable=SC1091
-    source .env/bin/activate
     pip install --upgrade pip
     pip install -e ".[dev]"
+    log " --> Done! \\n\\n"
+}
+
+function set_precommit {
+    log "Setting up pre-commit hook... \\n"
+    pre-commit install
     log " --> Done! \\n\\n"
 }
 
 # Initialise the environment
 create_venv
 install_dependencies
+set_precommit
