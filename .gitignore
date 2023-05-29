@@ -99,7 +99,7 @@ test/evaluation
 test/logs
 
 # Test files
-tests/data/
+tests/data/*
 tests/data/tmp/
 !tests/data/example.txt
 
